@@ -20,4 +20,11 @@
   
   .card {
     background: blue;
+    
+    margin: 1%;
+    float: left;
+    height: 24vw;
+  }
+  .flipped {
+    background-color: rgb(255,0,0);
   }
