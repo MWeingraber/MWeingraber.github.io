@@ -1,16 +1,22 @@
-//console.log("test")
-let c = document.querySelectorAll(".card")
-console.log(c)
+  
+const numberCards = 16
+let openedCards = []
 
-function change(){
-    this.classList.add("flipped")
-    setTimeout(() => {  this.classList.remove("flipped");}, 500);
+let p = document.querySelector('.deck')
+for (let index = 0; index < numberCards; index++) {
+        let c = document.createElement('div')
+        c.innerHTML = "Hallo "+ (index + 1)
+        c.type = index % 2 + 1
+        c.className="card"
+        c.addEventListener('click',flipp)
+        p.appendChild(c)
 }
 
-console.log("Test")
-let c = document.querySelectorAll('.card')
-console.log(c)
-
-for (const ttt of c) {
-    ttt.addEventListener('click', change)
+function flipp(event){
+    if(!this.classList.contains('found'))
+        openCard(this)
+    //this.classList.toggle('flipped')
+}
+function openCard(c){
+    alert(c.innerHTML)
 }
