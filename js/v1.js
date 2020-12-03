@@ -1,4 +1,4 @@
-function Game();
+function Game(){
     var VerfügbareIDs = ["a", "b", "c" , "d", "e", "f", "g", "h"];
     var genommeneIDs1 = [];
     var genommeneIDs2 = [];
