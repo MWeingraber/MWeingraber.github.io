@@ -1,30 +1,91 @@
-.deck {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: 1fr;
-  background-color: white;
-  grid-gap: 5px;
+/*Importe*/
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+
+
+body{
+    background-color: grey;
 }
-  .deck::before {
-    content: '';
-    width: 0;
-    padding-bottom: 100%;
-    grid-row: 1 ;
-    grid-column: 1;
-  }
-  .deck > *:first-child{
-    grid-row: 1;
-    grid-column: 1;
-  }
-  
-  
-  .card {
-    background: blue;
-    
-    margin: 1%;
-    float: left;
-    height: 24vw;
-  }
-  .flipped {
-    background-color: rgb(255,0,0);
-  }
+
+.UeberschriftClass{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Modak';
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    background-color: grey;
+}
+
+.deck{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+}
+
+.card{
+    background-color: rgb(32, 32, 32);
+    width: auto;
+    height: auto;
+    margin: 2%;
+    flex: auto;    
+    flex-basis: 17%;
+
+    color: grey;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 3px 3px black;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+
+/*Wenn man drauf klickt (das Umdrehen der Karte)!*/
+.flipped{
+    border-radius: 25%;
+
+    transition: 0.3s ease-in-out;
+    box-shadow: none;
+}
+
+
+.flipped#a{
+    background-color: #ff4400;
+}
+
+.flipped#b{
+    background-color: #0004ff;
+}
+
+.flipped#c{
+    background-color: #ff00b3;
+}
+
+.flipped#d{
+    background-color: #00ffea;
+}
+
+.flipped#e{
+    background-color: #8400ff;
+}
+
+.flipped#f{
+    background-color: #eaff00;
+}
+
+.flipped#g{
+    background-color: #04db04;
+}
+
+.flipped#h{
+    background-color: #DB1000;
+}
